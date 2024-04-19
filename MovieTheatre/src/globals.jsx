@@ -1,3 +1,3 @@
-export const BASE_URL = 'https://api.themoviedb.org/3'
+export const BASE_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey'
 
-export const POSTER_PATH = 'https://image.tmdb.org/t/p/original'
+export const POSTER_PATH = 'http://img.omdbapi.com'

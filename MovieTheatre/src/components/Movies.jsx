@@ -10,14 +10,18 @@ function Movies() {
 
     useEffect(() => {
         const getMovies = async () => {
-            const response = await axios.get(`${BASE_URL}/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}`)
-            console.log(response)
-            setMovies(response.data.results)
+            try {
+                const response = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=94195ae8`)
+                console.log(response.data)
+                setMovies(response.data.Search || [])
+        } catch (error) {
+            console.error("Error fetching movies:", error)
         }
+    }
         
         getMovies()
     }, [])
-    console.log(movies)
+    // console.log(movies)
 
     return (
         <div>

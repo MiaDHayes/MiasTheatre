@@ -1,7 +1,7 @@
 import { POSTER_PATH } from '../globals'
 
 const MovieList = ({movies}) => {
-    console.log(movies)
+    // console.log(movies)
 
     const moviesArray = Object.values(movies)
 
@@ -12,13 +12,13 @@ const MovieList = ({movies}) => {
         return (
             <div className="grid">
                 {
-                    moviesArray.map((movies) => {
-                        console.log(movies)
+                    moviesArray.map((movie) => {
+                        console.log(movie)
                         // console.log(movie.Year)
                         return (
-                        <div className='card' key={movies.id}>
-                            <img src={movies.Poster} alt='poster' />
-                            <h3>{movies.Title}</h3>
+                        <div className='card' key={movie.id}>
+                            <img src={movie.Poster} alt='poster' />
+                            <h3>{movie.Title}</h3>
                             <button>View Movie</button>
                         </div>
                     )

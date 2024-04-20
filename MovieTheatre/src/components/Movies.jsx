@@ -13,7 +13,7 @@ function Movies() {
             try {
                 const response = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=94195ae8`)
                 console.log(response.data)
-                setMovies(response.data.Search || [])
+                setMovies(response.data || [])
         } catch (error) {
             console.error("Error fetching movies:", error)
         }

@@ -11,9 +11,9 @@ function Movies() {
     useEffect(() => {
         const getMovies = async () => {
             try {
-                const response = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=94195ae8`)
-                console.log(response.data)
-                setMovies(response.data || [])
+                const response = await axios.get(`https://www.omdbapi.com/?apikey=9648e54&`)
+                console.log(response.data.Search)
+                setMovies(response.data.Search || [])
         } catch (error) {
             console.error("Error fetching movies:", error)
         }
